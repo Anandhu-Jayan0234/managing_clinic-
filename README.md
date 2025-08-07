@@ -25,4 +25,3 @@ HTML, CSS, Bootstrap
 
 Git & GitHub
 
-✅ Setup Instruc
