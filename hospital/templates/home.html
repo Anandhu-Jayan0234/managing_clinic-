@@ -1,0 +1,164 @@
+{% include 'base.html' %}
+{% load static %}
+{% include 'navigation.html' %}
+<style>
+body{
+  background-color: #0b4e92;
+}
+
+.floating-buttons {
+    position: fixed;
+    right: -200px; /* hide by default */
+    top: 30%;
+    width: 200px;
+    z-index: 9999;
+    transition: right 0.4s ease;
+}
+
+body:hover .floating-buttons {
+    right: 0; /* slide in when mouse moves on body */
+}
+
+.floating-buttons a {
+    display: block;
+    margin: 5px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.floating-buttons a:hover {
+    transform: scale(1.05);
+}
+
+
+</style>
+
+{% block content %}
+<!-- Carousel (Unchanged) -->
+<div id="carousel-slider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/2.jpg' %}" class="d-block w-100" alt="...">
+    
+        </div>
+        <!-- Repeat for other slides -->
+    </div>
+
+</div>
+
+<!-- Introduction Section -->
+<div class="container-fluid py-4">
+    <!-- Row 1: Welcome Text -->
+    <div class="row">
+        <div class="col text-center">
+            <h2>Welcome to Hospital Management System</h2>
+            <p>
+                <strong>Hospital Management System</strong> is a platform where you can access various services.
+                Located in Tulsipur Dang, it offers radiography, surgery, and expert care.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Sidebar Buttons -->
+<div class="floating-buttons" id="sidebar">
+    <a href="#about" class="btn btn-primary mb-2"><i class="fa fa-calendar-minus-o"></i> Appointment</a>
+    <a href="#doctors" class="btn btn-success mb-2"><i class="fa fa-user-md"></i> Doctors</a>
+    <a href="#about" class="btn btn-info mb-2"><i class="fa fa-map-marker"></i> Location</a>
+    <a href="#about" class="btn btn-danger"><i class="fa fa-phone"></i> Emergency</a>
+</div>
+
+
+
+<!------------------------------End of Other services---------------------->
+
+
+<!---------------------We team Section End---------------------->
+
+</div>
+<div class="carousel-inner">
+    <img src=" " style="max-width: 100%;">
+</div>
+
+<!---------------------We team Section End---------------------->
+
+<!-------------------Meet Our Team Section----------------->
+
+<div class="container-fluid" id="doctors">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="text-center text-primary">Meet Our Team</h4>
+            <h1 class="text-center">Specialist Doctors</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center text-center gy-4">
+        <div class="col-md-3">
+            <div class="card shadow profile-card">
+                <div class="card-body">
+                    <img class="img-thumbnail rounded-circle border-0 mb-3" src="{% static 'images/person.png' %}" alt="Dr. Xyz">
+                    <h4 class="card-title">Dr. Diya</h4>
+                    <h6 class="card-subtitle">Senior Consultant Surgeon</h6>
+                    <p class="card-text">MBBS, MS(TU), FMAS, DMAS (WLH)</p>
+                    <div>
+                        <a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow profile-card">
+                <div class="card-body">
+                    <img class="img-thumbnail rounded-circle border-0 mb-3" src="{% static 'images/person.png' %}" alt="Dr. Lucky Sharma">
+                    <h4 class="card-title">Anandhu</h4>
+                    <h6 class="card-subtitle">Neurology</h6>
+                    <p class="card-text">MBBS, MD (NMC)</p>
+                    <div>
+                        <a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow profile-card">
+                <div class="card-body">
+                    <img class="img-thumbnail rounded-circle border-0 mb-3" src="{% static 'images/person.png' %}" alt="Dr. Abc">
+                    <h4 class="card-title">Dr. T.K. Jayarajan</h4>
+                    <h6 class="card-subtitle">Neurology</h6>
+                    <p class="card-text">MBBS, MS</p>
+                    <div>
+                        <a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow profile-card">
+                <div class="card-body">
+                    <img class="img-thumbnail rounded-circle border-0 mb-3" src="{% static 'images/person.png' %}" alt="Dr. Dev">
+                    <h4 class="card-title">Dr. Dev</h4>
+                    <h6 class="card-subtitle">Consultant Physician</h6>
+                    <p class="card-text">MBBS, MD (Internal Medicine)</p>
+                    <div>
+                        <a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="card-link"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% include 'footer.html' %}

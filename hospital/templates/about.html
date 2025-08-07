@@ -1,0 +1,53 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+
+
+<style>
+.mydivstyle:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+</style>
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead text-muted">We are committed to providing exceptional healthcare and compassionate service to our community.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card mydivstyle p-3 h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-bullseye fa-2x text-primary mb-3"></i>
+                    <h5 class="card-title">Our Mission</h5>
+                    <p class="card-text">To deliver accessible, high-quality medical care to patients with empathy, integrity, and professionalism.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mydivstyle p-3 h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-eye fa-2x text-success mb-3"></i>
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">To be a leader in innovative healthcare, improving lives through excellence in treatment, education, and research.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mydivstyle p-3 h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-heart fa-2x text-danger mb-3"></i>
+                    <h5 class="card-title">Our Values</h5>
+                    <p class="card-text">We uphold compassion, respect, collaboration, and accountability in all our services and relationships.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+ {% include 'footer.html' %}
