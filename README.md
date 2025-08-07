@@ -15,6 +15,7 @@ Bootstrap-based responsive UI
 SQLite database integration
 
 🚀 Technologies Used:
+
 Python 3
 
 Django Framework
